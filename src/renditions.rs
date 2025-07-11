@@ -95,6 +95,12 @@ impl MediaClip<'_> {
         self.insert(Name(b"D")).start()
     }
 
+    /// Write the `/D` attribute as a reference to an embedded file.
+    pub fn data_ref(&mut self, id: Ref) -> &mut Self {
+        self.pair(Name(b"D"), id);
+        self
+    }
+
     /// Write the `/CT` attribute identifying the type of data in `/D`, i.e. the
     /// MIME type.
     pub fn data_type(&mut self, tf: Str) -> &mut Self {
