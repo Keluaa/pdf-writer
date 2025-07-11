@@ -155,8 +155,10 @@ fn main() -> std::io::Result<()> {
     media_clip.alt_texts([TextStr(""), TextStr("default text")]);
     media_clip.finish();
 
-    // Add controls for the media player.
-    rendition.media_play_params().controls(true);
+    // Add controls for the media player, and make the video repeat forever.
+    rendition.media_play_params().best_effort()
+        .controls(true)
+        .repeat_count(0.0);
 
     // Finish off a few things.
     rendition.finish();

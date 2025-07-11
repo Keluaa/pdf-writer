@@ -137,7 +137,7 @@ pub mod writers {
     pub use object::{
         DecodeParms, NameTree, NameTreeEntries, NumberTree, NumberTreeEntries,
     };
-    pub use renditions::{MediaClip, MediaPermissions, MediaPlayParams, Rendition};
+    pub use renditions::{MediaClip, MediaPermissions, MediaPlayParams, MediaPlayParamsEntries, Rendition};
     pub use structure::{
         Catalog, ClassMap, Destination, DeveloperExtension, DocumentInfo, MarkInfo,
         MarkedRef, Metadata, Names, Namespace, NamespaceRoleMap, ObjectRef, Outline,
